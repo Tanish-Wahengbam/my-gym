@@ -112,7 +112,7 @@
                     <div class="col-12">
                         <button type="submit" id="reservationForm"
                             class="btn btn-primary btn-lg w-100 rounded-3 shadow-lg fw-bold btn-custom-hover">
-                            LOCK IN MY RATE
+                            Send Enquiry
                         </button>
                         <p id="errorMessage" class="text-danger text-center mt-3"></p>
                     </div>
@@ -165,7 +165,9 @@
     <footer class="footer">
         <img src="images/logo.svg" alt="FitnessForce Logo">
         <p>&copy; 2025 FitnessForce.com. All Rights Reserved.</p>
-        <a class="btn-footer">Book a Tour</a>
+        <a class="btn btn-lg rounded-pill shadow-sm btn-footer" href="#">
+            Book a Tour
+        </a>
     </footer>
 
     <!-- Tour Booking Modal -->
@@ -178,6 +180,20 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <div class="stepper-wrapper mb-4">
+                        <div class="stepper-item active" id="stepper1">
+                            <div class="step-counter">1</div>
+                            <div class="step-name">Select Dates</div>
+                        </div>
+                        <div class="stepper-item" id="stepper2">
+                            <div class="step-counter">2</div>
+                            <div class="step-name">Choose Slot</div>
+                        </div>
+                        <div class="stepper-item" id="stepper3">
+                            <div class="step-counter">3</div>
+                            <div class="step-name">Your Details</div>
+                        </div>
+                    </div>
                     <form id="tourBookingForm">
                         <!-- Step 1: Date Selection -->
                         <div class="step" id="step1">
@@ -344,6 +360,17 @@
             $('#tourBookingModal').modal('show');
         });
 
+        // Add this to your existing JavaScript where you handle steps
+        function updateStepper(step) {
+            // Remove active class from all steppers
+            document.querySelectorAll('.stepper-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Add active class to current step
+            document.getElementById(`stepper${step}`).classList.add('active');
+        }
+
         // Handle Next button
         document.getElementById('nextBtn').addEventListener('click', async () => {
             if (currentStep === 1) {
@@ -409,6 +436,7 @@
                 document.getElementById(`step${currentStep}`).style.display = 'none';
                 currentStep++;
                 document.getElementById(`step${currentStep}`).style.display = 'block';
+                updateStepper(currentStep); // Add this line
 
                 if (currentStep > 1) {
                     document.getElementById('prevBtn').style.display = 'block';
@@ -427,6 +455,7 @@
                 document.getElementById(`step${currentStep}`).style.display = 'none';
                 currentStep--;
                 document.getElementById(`step${currentStep}`).style.display = 'block';
+                updateStepper(currentStep); // Add this line
 
                 if (currentStep === 1) {
                     document.getElementById('prevBtn').style.display = 'none';
