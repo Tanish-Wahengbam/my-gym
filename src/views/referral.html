@@ -2,40 +2,38 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Make Your Reservation</title>
-  <!-- Bootstrap CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    crossorigin="anonymous">
-  <!-- Google Fonts - Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refer a Friend | MyGem</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="antialiased">
-  <section
-    class="hero-section hero-section2 bg-gradient-to-br from-indigo-600 to-purple-700 text-white py-5 py-md-5 shadow-lg">
-    <div class="container text-center">
-      <div class="logo-center text-center pb-5"><img src="/images/logo-cruch.svg"></div>
-      <h1 class="display-4 fw-bolder mb-4 py-5 animate-fade-in-up custom-font-family">
-        Refer Your Friends
-      </h1>
-    </div>
+<body>
+  <!-- Hero Section (Header) -->
+  <section class="hero">
+    <!-- Centered Logo -->
+    <img src="images/logo.png" alt="MyGem Logo">
+    <h1>Refer Your Friends
+    </h1>
   </section>
-  <!-- Referral Form Section -->
-  <section class="container-fluid bg-black mx-auto px-4 mt-12 mb-12 bg-refer-sec">
-    <div class="row justify-content-center">
-      <div class="col-lg-10 col-md-12">
-        <div class="form-card">
-          <span class="text-refer-small custom-font-family">REFER A
-            FRIEND</span>
-          <h2 class="text-3xl font-semibold text-center mb-6 text-white refer-text">Simply
-            enter your friend's details below, and when they get started,
-            you'll get rewarded.</h2>
+
+
+
+  <!-- Content + Form Section -->
+  <section class="content-section">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Explanation -->
+
+        <!-- Referral Form -->
+        <div class="col-md-12">
+          <h5 class="rfer-text1">REFER A FRIEND</h5>
+          <h2 class="rfer-text2">Simply enter your friend's details below, and when they get started, you'll get
+            rewarded.
+          </h2>
+          <div class="referral-form">
           <form id="referralForm">
             <!-- Select Location -->
             <div class="mb-4">
@@ -69,13 +67,13 @@
                 YOUR FRIENDS</button>
             </div>
           </form>
-          <div id="errorMessage" class="text-danger text-center mt-3"></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Success Message Modal -->
+    <!-- Success Message Modal -->
   <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content rounded-3 shadow-lg p-4 text-center">
@@ -97,25 +95,16 @@
       </div>
     </div>
   </div>
-  <!-- Footer Section -->
-  <footer class="bg-black text-white py-4 footer-text">
-    <div class="container text-center d-md-flex justify-content-between align-items-center">
-      <p class="mb-3 mb-md-0 text-secondary">© Crunch Fitness. All rights
-        reserved.</p>
-      <div class="d-flex justify-content-center space-x-4">
-        <a href="https://www.crunch.com/privacy-policy"
-          class="text-secondary text-decoration-none hover-white fw-medium me-3">Privacy
-          Policy</a>
-        <a href="https://www.crunch.com/terms-of-use"
-          class="text-secondary text-decoration-none hover-white fw-medium me-3">Terms
-          of Service</a>
-      </div>
-    </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <img src="images/logo.svg" alt="FitnessForce Logo">
+    <p>&copy; 2025 FitnessForce.com. All Rights Reserved.</p>
+    <a class="btn-footer">Book a Tour</a>
   </footer>
-  <!-- Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
   <script>
     // Populate location dropdown from /api/tenants

@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lock In the Best Rate | FitnessForce</title>
-  
-  <!-- Google Fonts for Nunito -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-   <link rel="stylesheet" href="css/style.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lock In the Best Rate | FitnessForce</title>
+
+    <!-- Google Fonts for Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
-  <!-- Hero Section (Header) -->
-  <section class="hero">
-    <!-- Centered Logo -->
-    <img src="images/logo.png" alt="MyGem Logo">
-    <h1>Lock In the Best Rate</h1>
-    <p>Get early access and exclusive offers—be the first to know when memberships go live as a Founding Member.</p>
-  </section>
+    <!-- Hero Section (Header) -->
+    <section class="hero">
+        <!-- Centered Logo -->
+        <img src="images/logo.png" alt="MyGem Logo">
+        <h1>Lock In the Best Rate</h1>
+        <p>Get early access and exclusive offers—be the first to know when memberships go live as a Founding Member.</p>
+    </section>
 
-  <!-- Inquiry Form -->
-  <section class="form-section container">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <form id="reservationForm" class="row">
+    <!-- Inquiry Form -->
+    <section class="form-section container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="reservationForm" class="row">
                     <!-- Name -->
                     <div class="col-12">
                         <label for="name" class="form-label fw-semibold text-dark">First
@@ -121,27 +123,115 @@
                         <span class="visually-hidden">Loading...</span>
                     </div>
                 </div>
-      </div>
-	  
-	        <div class="col-md-6">
-			<h4 style="font-weight:bold;">Reserve Your Rate Today
-</h4>
-			<p>We love opening new clubs and are pumped to be adding a location near you!
+            </div>
 
-Patience may be a virtue, but it's cool with us if it's not one of yours. Get in early by signing up now to make sure you're the first to know when memberships go on sale and have the opportunity to secure your spot as a Founding Member. All you need to do is submit your contact information and you'll receive all the info on the lowest rates, plus exclusive offers and giveaways.</p>
-			</div>
+            <div class="col-md-6">
+                <h4 style="font-weight:bold;">Reserve Your Rate Today
+                </h4>
+                <p>We love opening new clubs and are pumped to be adding a location near you!
+
+                    Patience may be a virtue, but it's cool with us if it's not one of yours. Get in early by signing up
+                    now to make sure you're the first to know when memberships go on sale and have the opportunity to
+                    secure your spot as a Founding Member. All you need to do is submit your contact information and
+                    you'll receive all the info on the lowest rates, plus exclusive offers and giveaways.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Message Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-3 shadow-lg p-4 text-center">
+                <div class="modal-body">
+                    <svg class="mx-auto mb-4" style="height: 5rem; width: 5rem; color: #28a745;" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h3 class="h3 fw-bold text-dark mb-3">Reservation
+                        Confirmed!</h3>
+                    <p class="text-secondary fs-5">Thank you for
+                        your reservation. We look forward to seeing
+                        you!</p>
+                    <button type="button" class="btn btn-primary rounded-3 shadow-sm mt-4" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <img src="images/logo.svg" alt="FitnessForce Logo">
-    <p>&copy; 2025 FitnessForce.com. All Rights Reserved.</p>
-	<a class="btn-footer">Book a Tour</a>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <img src="images/logo.svg" alt="FitnessForce Logo">
+        <p>&copy; 2025 FitnessForce.com. All Rights Reserved.</p>
+        <a class="btn-footer">Book a Tour</a>
+    </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-      <!-- jQuery CDN (add before Bootstrap JS) -->
+    <!-- Tour Booking Modal -->
+    <div class="modal fade" id="tourBookingModal" tabindex="-1" aria-labelledby="tourBookingModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tourBookingModalLabel">Book a Tour</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="tourBookingForm">
+                        <!-- Step 1: Date Selection -->
+                        <div class="step" id="step1">
+                            <h6>Select Tour Dates</h6>
+                            <div class="mb-3">
+                                <label class="form-label">Start Date</label>
+                                <input type="date" class="form-control" id="startDate" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">End Date</label>
+                                <input type="date" class="form-control" id="endDate" required>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Time Slot Selection -->
+                        <div class="step" id="step2" style="display: none;">
+                            <h6>Select Available Time Slot</h6>
+                            <div class="mb-3">
+                                <select class="form-select" id="timeSlot" required>
+                                    <option value="">Choose a time slot</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Personal Details -->
+                        <div class="step" id="step3" style="display: none;">
+                            <h6>Your Details</h6>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Full Name" id="fullName" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Email" id="tourEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" placeholder="Phone Number" id="tourPhone"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" id="prevBtn"
+                                style="display: none;">Previous</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+                            <button type="submit" class="btn btn-success" id="submitBtn"
+                                style="display: none;">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery CDN (add before Bootstrap JS) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Add jQuery Validation plugin CDN after jQuery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
@@ -158,12 +248,12 @@ Patience may be a virtue, but it's cool with us if it's not one of yours. Get in
                 const dropdown = document.getElementById('locationDropdown');
                 const tenants = data.items || [];
                 tenants.forEach(tenant => {
-                    if (tenant.status == 'PreSales') {
-                        const option = document.createElement('option');
-                        option.value = tenant.tenant_uuid;
-                        option.textContent = tenant.name_primary_language;
-                        dropdown.appendChild(option);
-                    }
+                    // if (tenant.status == 'PreSales') {
+                    const option = document.createElement('option');
+                    option.value = tenant.tenant_uuid;
+                    option.textContent = tenant.name_primary_language;
+                    dropdown.appendChild(option);
+                    // }
                 });
             });
         // Replace the form submit handler with jQuery validation
@@ -244,7 +334,152 @@ Patience may be a virtue, but it's cool with us if it's not one of yours. Get in
                 }
             });
         });
+
+        let currentStep = 1;
+        const totalSteps = 3;
+        let selectedSlot = null;
+
+        // Event listener for "Book a Tour" button
+        document.querySelector('.btn-footer').addEventListener('click', () => {
+            $('#tourBookingModal').modal('show');
+        });
+
+        // Handle Next button
+        document.getElementById('nextBtn').addEventListener('click', async () => {
+            if (currentStep === 1) {
+                // const startDate = document.getElementById('startDate').value;
+                // const endDate = document.getElementById('endDate').value;
+
+                // if (!startDate || !endDate) {
+                //     alert('Please select both dates');
+                //     return;
+                // }
+
+                // try {
+                //     const response = await fetch(`https://api.unifiedfitnessplatform.ai/open/companies/8a25b0b1-e8ac-4d71-b0e2-9476645043e4/tenants/4d2b6de2-5697-4fc0-8bae-31845221b271/tour_availablity?start_date=${startDate}&end_date=${endDate}`);
+                //     const data = await response.json();
+
+                //     // Populate time slots
+                //     const timeSlotSelect = document.getElementById('timeSlot');
+                //     timeSlotSelect.innerHTML = '<option value="">Choose a time slot</option>';
+
+                //     data.slots.forEach(slot => {
+                //         const option = document.createElement('option');
+                //         option.value = slot.id;
+                //         option.textContent = `${slot.date} - ${slot.time}`;
+                //         timeSlotSelect.appendChild(option);
+                //     });
+                // } 
+                // catch (error) {
+                //     console.error('Error fetching slots:', error);
+                //     alert('Error loading available slots');
+                //     return;
+                // }
+
+                const startDate = document.getElementById('startDate').value;
+                const endDate = document.getElementById('endDate').value;
+
+                if (!startDate || !endDate) {
+                    alert('Please select both dates');
+                    return;
+                }
+
+                // Static data for testing
+                const staticSlots = [
+                    { id: '1', date: '2024-08-24', time: '09:00 AM' },
+                    { id: '2', date: '2024-08-24', time: '11:00 AM' },
+                    { id: '3', date: '2024-08-24', time: '02:00 PM' },
+                    { id: '4', date: '2024-08-25', time: '10:00 AM' },
+                    { id: '5', date: '2024-08-25', time: '03:00 PM' }
+                ];
+
+                // Populate time slots
+                const timeSlotSelect = document.getElementById('timeSlot');
+                timeSlotSelect.innerHTML = '<option value="">Choose a time slot</option>';
+
+                staticSlots.forEach(slot => {
+                    const option = document.createElement('option');
+                    option.value = slot.id;
+                    option.textContent = `${slot.date} - ${slot.time}`;
+                    timeSlotSelect.appendChild(option);
+                });
+            }
+
+            if (currentStep < totalSteps) {
+                document.getElementById(`step${currentStep}`).style.display = 'none';
+                currentStep++;
+                document.getElementById(`step${currentStep}`).style.display = 'block';
+
+                if (currentStep > 1) {
+                    document.getElementById('prevBtn').style.display = 'block';
+                }
+
+                if (currentStep === totalSteps) {
+                    document.getElementById('nextBtn').style.display = 'none';
+                    document.getElementById('submitBtn').style.display = 'block';
+                }
+            }
+        });
+
+        // Handle Previous button
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentStep > 1) {
+                document.getElementById(`step${currentStep}`).style.display = 'none';
+                currentStep--;
+                document.getElementById(`step${currentStep}`).style.display = 'block';
+
+                if (currentStep === 1) {
+                    document.getElementById('prevBtn').style.display = 'none';
+                }
+
+                document.getElementById('nextBtn').style.display = 'block';
+                document.getElementById('submitBtn').style.display = 'none';
+            }
+        });
+
+        // Handle form submission
+        document.getElementById('tourBookingForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = {
+                startDate: document.getElementById('startDate').value,
+                endDate: document.getElementById('endDate').value,
+                timeSlot: document.getElementById('timeSlot').value,
+                fullName: document.getElementById('fullName').value,
+                email: document.getElementById('tourEmail').value,
+                phone: document.getElementById('tourPhone').value
+            };
+
+            try {
+                const response = await fetch('/api/book-tour', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    $('#tourBookingModal').modal('hide');
+                    $('#successModal').modal('show');
+                    // Reset form
+                    document.getElementById('tourBookingForm').reset();
+                    currentStep = 1;
+                    document.querySelectorAll('.step').forEach(step => step.style.display = 'none');
+                    document.getElementById('step1').style.display = 'block';
+                    document.getElementById('nextBtn').style.display = 'block';
+                    document.getElementById('prevBtn').style.display = 'none';
+                    document.getElementById('submitBtn').style.display = 'none';
+                } else {
+                    alert('Error booking tour. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error booking tour. Please try again.');
+            }
+        });
     </script>
 
 </body>
+
 </html>

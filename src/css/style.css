@@ -95,3 +95,227 @@ footer.footer p {
 }
 
 }
+
+
+/* css */
+
+
+
+.remove-friend-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    background: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+form#reservationForm {
+    padding: 20px 0 0 0;
+}
+form#reservationForm .form-check input {
+    width: 17px !important;
+    height: 17px;
+    border-radius: 5px !important;
+    padding: 0;
+}
+
+
+
+/* Custom animations (Bootstrap doesn't have these built-in, so re-adding with custom CSS) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+}
+
+.delay-600 {
+    animation-delay: 0.6s;
+}
+
+.delay-700 {
+    animation-delay: 0.7s;
+}
+
+.delay-800 {
+    animation-delay: 0.8s;
+}
+
+.hero-section2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../images/The-Hub_Images_Header.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: 0;
+}
+
+.hero-section2::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(177.06deg,
+            #401945 27.66%,
+            rgba(217, 217, 217, 0) 136.78%);
+    mix-blend-mode: multiply;
+    content: "";
+}
+
+.form-card input,
+.form-card select {
+    border-radius: 0 !important;
+    border: none;
+    height: 50px;
+}
+
+.form-card .btn-submit-custom {
+    background: #000;
+    color: #ffffff;
+    border: none;
+    border-radius: 0 !important;
+    height: 54px;
+    max-width: 280px;
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 40px !important;
+}
+
+.refer-text {
+    font-size: 44px;
+    margin: 10px 0 50px 0;
+    float: left;
+    width: 100%;
+}
+
+
+
+/* Custom styling for form inputs to match the image */
+.form-control-custom {
+    background-color: #fff;
+    /* Black background for inputs */
+    border: 1px solid #ff0000;
+    /* Red border */
+    color: #000;
+    /* White text */
+    padding: 1rem 1.25rem;
+    /* Increased padding */
+    border-radius: 0.5rem;
+    /* Slightly rounded corners */
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    width: 100%;
+}
+
+.form-control-custom::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    /* Lighter placeholder text */
+}
+
+
+.btn-submit-custom {
+    background-color: #ff0000;
+    /* Red button */
+    border-color: #ff0000;
+    color: white;
+    transition: background-color 0.3s ease;
+    padding: 1rem 2rem;
+    /* Larger padding for the button */
+    font-size: 1.25rem;
+    /* Larger font size */
+    font-weight: 600;
+    border-radius: 0.5rem;
+    /* Rounded corners for the button */
+}
+
+.btn-submit-custom:hover {
+    background-color: #cc0000;
+    /* Darker red on hover */
+    border-color: #cc0000;
+    color: #fff;
+}
+
+.form-select-custom {
+    background-color: #fff;
+    /* Black background for select */
+    border: 1px solid #ff0000;
+    /* Red border */
+    color: #000;
+    /* White text */
+    padding: 1rem 1.25rem;
+    /* Increased padding */
+    border-radius: 0.5rem;
+    /* Slightly rounded corners */
+    font-size: 1rem;
+    line-height: 1.5;
+    -webkit-appearance: none;
+    /* Remove default arrow */
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    /* Custom white arrow */
+    background-repeat: no-repeat;
+    background-position: right 1.25rem center;
+    background-size: 1rem 0.75rem;
+    width: 100%;
+}
