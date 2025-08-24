@@ -1,0 +1,26 @@
+{
+  "name": "ff",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Tanish-Wahengbam/FF2LandingPage#readme",
+  "bugs": {
+    "url": "https://github.com/Tanish-Wahengbam/FF2LandingPage/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tanish-Wahengbam/FF2LandingPage.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.1.10"
+  }
+}

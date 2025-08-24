@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lock In the Best Rate | FitnessForce</title>
+  
+  <!-- Google Fonts for Nunito -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Hero Section (Header) -->
+  <section class="hero">
+    <!-- Centered Logo -->
+    <img src="images/logo.png" alt="MyGem Logo">
+    <h1>Lock In the Best Rate</h1>
+    <p>Get early access and exclusive offers—be the first to know when memberships go live as a Founding Member.</p>
+  </section>
+
+  <!-- Inquiry Form -->
+  <section class="form-section container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form id="reservationForm" class="row">
+                    <!-- Name -->
+                    <div class="col-12">
+                        <label for="name" class="form-label fw-semibold text-dark">First
+                            Name</label>
+                        <input type="text" id="name" name="fname" placeholder="first name" required
+                            class="form-control form-control-lg rounded-3 shadow-sm">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="name" class="form-label fw-semibold text-dark">Last
+                            Name</label>
+                        <input type="text" id="name" name="lname" placeholder="last name" required
+                            class="form-control form-control-lg rounded-3 shadow-sm">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-12">
+                        <label for="email" class="form-label fw-semibold text-dark">Email
+                            Address</label>
+                        <input type="email" id="email" name="email" placeholder="email" required
+                            class="form-control form-control-lg rounded-3 shadow-sm">
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="col-12">
+                        <label for="phone" class="form-label fw-semibold text-dark">Phone
+                            Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="phone number"
+                            class="form-control form-control-lg rounded-3 shadow-sm">
+                    </div>
+
+                    <!-- Number of Guests -->
+                    <div class="col-12">
+                        <label for="location" class="form-label fw-semibold text-dark">
+                            Location of Interest*</label>
+                        <select id="locationDropdown" name="location" required
+                            class="form-select form-select-lg rounded-3 shadow-sm">
+                            <option value selected disabled>Please
+                                select</option>
+                        </select>
+                    </div>
+                    <!-- Checkbox for Terms and Conditions / Newsletter -->
+                    <div class="col-12 mt-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value id="termsCheckbox">
+                            <label class="form-check-label text-secondary" for="termsCheckbox">
+                                <span>STAY UPDATED ON CLUB NEWS! By checking
+                                    this box, I consent to receive
+                                    promotional
+                                    emails, calls (including prerecorded
+                                    calls),
+                                    and automated SMS texts from Crunch
+                                    and/or
+                                    its affiliates or agents. I confirm that
+                                    I
+                                    am the authorized user of the provided
+                                    email
+                                    and phone number. I understand that my
+                                    consent is voluntary and not a condition
+                                    of
+                                    purchasing any goods or services. I can
+                                    opt
+                                    out anytime by unsubscribing from emails
+                                    or
+                                    texting STOP to any SMS. Standard
+                                    message
+                                    and data rates may apply. Messaging
+                                    frequency varies. I also agree to the <a href="https://www.crunch.com/terms-of-use"
+                                        rel="noopener">Terms
+                                        of Use</a> and
+                                    consent to the <a href="https://www.crunch.com/privacy-policy"
+                                        rel="noopener">Privacy
+                                        Policy</a> ,
+                                    including collecting certain location
+                                    and
+                                    usage information.<span class="hs-form-required">*</span></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="col-12">
+                        <button type="submit" id="reservationForm"
+                            class="btn btn-primary btn-lg w-100 rounded-3 shadow-lg fw-bold btn-custom-hover">
+                            LOCK IN MY RATE
+                        </button>
+                        <p id="errorMessage" class="text-danger text-center mt-3"></p>
+                    </div>
+                </form>
+                <!-- Add this spinner just before the closing </form> tag -->
+                <div class="text-center my-3">
+                    <div id="formLoader" class="spinner-border text-primary" style="display:none;" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+      </div>
+	  
+	        <div class="col-md-6">
+			<h4 style="font-weight:bold;">Reserve Your Rate Today
+</h4>
+			<p>We love opening new clubs and are pumped to be adding a location near you!
+
+Patience may be a virtue, but it's cool with us if it's not one of yours. Get in early by signing up now to make sure you're the first to know when memberships go on sale and have the opportunity to secure your spot as a Founding Member. All you need to do is submit your contact information and you'll receive all the info on the lowest rates, plus exclusive offers and giveaways.</p>
+			</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <img src="images/logo.svg" alt="FitnessForce Logo">
+    <p>&copy; 2025 FitnessForce.com. All Rights Reserved.</p>
+	<a class="btn-footer">Book a Tour</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- jQuery CDN (add before Bootstrap JS) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Add jQuery Validation plugin CDN after jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Fetch tenants for dropdown
+        fetch('/api/tenants')
+            .then(res => res.json())
+            .then(data => {
+                const dropdown = document.getElementById('locationDropdown');
+                const tenants = data.items || [];
+                tenants.forEach(tenant => {
+                    if (tenant.status == 'PreSales') {
+                        const option = document.createElement('option');
+                        option.value = tenant.tenant_uuid;
+                        option.textContent = tenant.name_primary_language;
+                        dropdown.appendChild(option);
+                    }
+                });
+            });
+        // Replace the form submit handler with jQuery validation
+        $(function () {
+            $('#reservationForm').validate({
+                rules: {
+                    fname: { required: true },
+                    lname: { required: true },
+                    email: { required: true, email: true },
+                    phone: { required: true, minlength: 8 },
+                    location: { required: true }
+                },
+                messages: {
+                    fname: 'First name is required',
+                    lname: 'Last name is required',
+                    email: {
+                        required: 'Email is required',
+                        email: 'Please enter a valid email address'
+                    },
+                    phone: {
+                        required: 'Phone number is required',
+                        minlength: 'Phone number must be at least 8 digits'
+                    },
+                    location: 'Please select a location'
+                },
+                errorClass: 'is-invalid',
+                validClass: 'is-valid',
+                errorElement: 'div',
+                errorPlacement: function (error, element) {
+                    error.addClass('invalid-feedback');
+                    if (element.parent('.input-group').length) {
+                        error.insertAfter(element.parent());
+                    } else {
+                        error.insertAfter(element);
+                    }
+                },
+                highlight: function (element) {
+                    $(element).addClass('is-invalid').removeClass('is-valid');
+                },
+                unhighlight: function (element) {
+                    $(element).removeClass('is-invalid').addClass('is-valid');
+                },
+                submitHandler: async function (form, event) {
+                    event.preventDefault();
+                    const submitBtn = $(form).find('button[type="submit"]')[0];
+                    const loader = document.getElementById('formLoader');
+                    submitBtn.disabled = true;
+                    loader.style.display = 'inline-block';
+                    document.getElementById('errorMessage').textContent = '';
+                    try {
+                        const payload = {
+                            fname: form.fname.value,
+                            lname: form.lname.value,
+                            email: form.email.value,
+                            mobile: form.phone.value,
+                            location: form.location.options[form.location.selectedIndex].text,
+                            tenant_uuid: form.location.value
+                        };
+                        const res = await fetch('/api/leads', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+                        const result = await res.json();
+                        if (result.success) {
+                            $('#successModal').modal('show');
+                            form.reset();
+                            $(form).find('.is-valid').removeClass('is-valid');
+                        } else {
+                            document.getElementById('errorMessage').textContent = result.error[0]?.errorMessage || 'Submission failed.';
+                        }
+                    } catch (err) {
+                        document.getElementById('errorMessage').textContent = 'An error occurred. Please try again.';
+                    } finally {
+                        submitBtn.disabled = false;
+                        loader.style.display = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
