@@ -603,3 +603,123 @@
     section.services.container h5 {
         font-family: "Oswald", sans-serif;
     }
+
+    .time-slot {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px 15px;
+        border: 1px solid #000;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+
+    .time-slot:hover {
+        background: #000;
+        color: #fff;
+    }
+
+    .time-slot.selected {
+        background: #e4000e;
+        color: #fff;
+    }
+
+
+    /* stepper */
+
+    .stepper-item.active .step-counter {
+        background-color: #000;
+    }
+
+    .modal-header p {
+        margin: 0;
+        color: #fff;
+    }
+
+    .modal-header {
+        flex-direction: column;
+        position: relative;
+        background: #e4000e;
+    }
+
+    .modal-header button.btn-close {
+        position: absolute;
+        right: 20px;
+    }
+
+    .stepper-item.active .step-name {
+        color: #000;
+        font-weight: bold;
+    }
+
+    button#nextBtn {
+        background: #e4000e;
+        border: none;
+        color: rgb(255, 255, 255);
+        height: 38px;
+        max-width: 280px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        border-radius: 0px !important;
+        text-transform: uppercase;
+    }
+
+    button#prevBtn {
+        background: #000;
+        border: none;
+        color: rgb(255, 255, 255);
+        height: 38px;
+        max-width: 280px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        border-radius: 0px !important;
+        text-transform: uppercase;
+    }
+
+    .modal-content select, .modal-content input {
+        height: 40px;
+        border: 1px solid #ccc;
+    }
+
+    button#submitBtn {
+        background: #e4000e;
+        border: none;
+        color: rgb(255, 255, 255);
+        height: 38px;
+        max-width: 280px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        border-radius: 0px !important;
+        text-transform: uppercase;
+    }
+
+    .modal-dialog.modal-dialog-centered {
+        max-width: 600px;
+    }
+
+    div#tourBookingModal {
+        background: #000000a3;
+    }
+
+    .modal-title {
+        font-family: "Oswald", sans-serif;
+        text-align: center;
+        width: 100%;
+        font-size: 32px;
+        color: #fff;
+    }
