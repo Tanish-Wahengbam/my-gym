@@ -117,10 +117,227 @@
     <footer class="footer">
       <img src="images/logo.svg" alt="FitnessForce Logo">
       <p>&copy; 2025 FitnessForce.com. All Rights Reserved.</p>
+      <a class="shadow-sm btn-footer px-3" href="#">
+                Book a Tour
+            </a>
     </footer>
 
+
+            <!-- Tour Booking Modal -->
+        <div class="modal fade" id="tourBookingModal" tabindex="-1"
+            aria-labelledby="tourBookingModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="tourBookingModalLabel">Book
+                            a Tour</h5>
+                        <p>Enter your information to reserve your slot</p>
+                        <button type="button" class="btn-close"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="stepper-wrapper mb-4">
+                            <div class="stepper-item active" id="stepper1">
+                                <div class="step-counter"><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="22" height="22"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M7 11h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zM7 15h2v2H7v-2zm4 
+  0h2v2h-2v-2zm4 0h2v2h-2v-2zM6 3h1V1h2v2h6V1h2v2h1a2 2 0 0 1 2 
+  2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm0 
+  4v12h12V7H6z" />
+                                    </svg></div>
+                                <div class="step-name">Select Dates</div>
+                            </div>
+                            <div class="stepper-item" id="stepper2">
+                                <div class="step-counter"><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="22" height="22"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 1a11 11 0 1 0 11 11A11.013 11.013 0 0 0 12 
+  1zm0 20a9 9 0 1 1 9-9a9.01 9.01 0 0 1-9 9zm.5-13H11v6l5.25 
+  3.15l.75-1.23l-4.5-2.67z" />
+                                    </svg></div>
+                                <div class="step-name">Choose Slot</div>
+                            </div>
+                            <div class="stepper-item" id="stepper3">
+                                <div class="step-counter"><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="22" height="22"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 12a5 5 0 1 0-5-5a5 5 0 0 0 5 
+  5zm0 2c-3.33 0-10 1.67-10 
+  5v3h20v-3c0-3.33-6.67-5-10-5z" />
+                                    </svg></div>
+                                <div class="step-name">Your Details</div>
+                            </div>
+                        </div>
+                        <form id="tourBookingForm">
+                            <!-- Step 1: Date Selection -->
+                            <div class="step" id="step1">
+                                <!-- <span>Select Tour Dates</span> -->
+                                <div
+                                    class="date-error-message text-center"></div>
+                                <div class="mb-3">
+                                    <label class="form-label">Start Date</label>
+                                    <input type="date" class="form-control"
+                                        id="startDate" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">End Date</label>
+                                    <input type="date" class="form-control"
+                                        id="endDate" required>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Time Slot Selection -->
+                            <!-- <div class="step" id="step2" style="display: none;">
+                            <div class="mb-3">
+                                <select class="form-select" id="timeSlot" required>
+                                    <option value>Choose a time
+                                        slot</option>
+                                </select>
+                            </div>
+                        </div> -->
+                            <div class="step" id="step2" style="display: none;">
+                                <div
+                                    class="slot-time-error-message text-center"></div>
+                                <label for="dateSelect">Choose a Date:</label>
+                                <select id="dateSelect" class="form-control">
+                                    <option value>Select a date</option>
+                                </select>
+
+                                <div id="timeSlotsContainer" class="mt-3"></div>
+                            </div>
+
+                            <!-- Step 3: Personal Details -->
+                            <div class="step" id="step3" style="display: none;">
+                                <!-- <h6>Your Details</h6> -->
+                                <div class="mb-3">
+                                    <input type="text" class="form-control"
+                                        placeholder="Full Name" id="fullName"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control"
+                                        placeholder="Email" id="tourEmail"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" class="form-control"
+                                        placeholder="Phone Number"
+                                        id="tourPhone"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <select class="form-control" id="country"
+                                        required>
+                                        <option value>Select Country</option>
+                                        <option value="USA">United
+                                            States</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <select class="form-control" id="state"
+                                        required>
+                                        <option value>Select State</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option
+                                            value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New
+                                            Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North
+                                            Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South
+                                            Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West
+                                            Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <input type="text" class="form-control"
+                                        placeholder="City" id="city"
+                                        required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <textarea class="form-control"
+                                        placeholder="Notes" id="tourNotes"
+                                        rows="4" required></textarea>
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    id="prevBtn"
+                                    style="display: none;">Previous</button>
+                                <button type="button" class="btn btn-primary"
+                                    id="nextBtn">Next</button>
+                                <button type="submit" class="btn btn-success"
+                                    id="submitBtn"
+                                    style="display: none;">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
@@ -132,10 +349,14 @@
         const dropdown = document.getElementById('selectLocation');
         const tenants = data.items || [];
         tenants.forEach(tenant => {
+
+          if(tenant.id === 120) // Only include active tenants
+          {
           const option = document.createElement('option');
           option.value = tenant.tenant_uuid;
           option.textContent = tenant.name_primary_language;
           dropdown.appendChild(option);
+          }
         });
       });
     // Dynamic friend fields logic
@@ -270,6 +491,237 @@
         }
       });
     });
+  
+            $('#startDate, #endDate').on('change', function () {
+            $('.date-error-message').text(''); // clear error
+
+            const startDate = new Date($('#startDate').val());
+            const endDate = new Date($('#endDate').val());
+
+            if (startDate && endDate) {
+                const diffTime = endDate - startDate;
+                const diffDays = diffTime / (1000 * 60 * 60 * 24); // convert ms → days
+
+                if (diffDays < 0) {
+                    $('.date-error-message').text('End date cannot be before start date').css('color', 'red');
+                    $('#endDate').val('');
+                } else if (diffDays > 7) {
+                    $('.date-error-message').text('Date range cannot exceed 7 days').css('color', 'red');
+                    $('#endDate').val('');
+                }
+            }
+        });
+  let currentStep = 1;
+        const totalSteps = 3;
+        let selectedSlot = null;
+
+        // Event listener for "Book a Tour" button
+        document.querySelector('.btn-footer').addEventListener('click', () => {
+            $('#tourBookingModal').modal('show');
+        });
+
+        // Add this to your existing JavaScript where you handle steps
+        function updateStepper(step) {
+            // Remove active class from all steppers
+            document.querySelectorAll('.stepper-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Add active class to current step
+            document.getElementById(`stepper${step}`).classList.add('active');
+        }
+
+        // Handle Next button
+        document.getElementById('nextBtn').addEventListener('click', async () => {
+            if (currentStep === 1) {
+
+                const startDate = document.getElementById('startDate').value;
+                const endDate = document.getElementById('endDate').value;
+
+                if (!startDate || !endDate) {
+                    $('.date-error-message').text('Please select both dates').css('color', 'red');
+                    return;
+                }
+
+                loadSlots(startDate, endDate, "405ac829-d6f3-407c-8eae-38ac74667594");
+            }
+
+            if (currentStep === 2) {
+                const selectedSlot = document.querySelector('.time-slot.selected');
+                if (!selectedSlot) {
+                    $('.slot-time-error-message ').text('Please select a slot time').css('color', 'red');
+                    return; // stop navigation
+                }
+            }
+
+            if (currentStep < totalSteps) {
+                document.getElementById(`step${currentStep}`).style.display = 'none';
+                currentStep++;
+                document.getElementById(`step${currentStep}`).style.display = 'block';
+                updateStepper(currentStep); // Add this line
+
+                if (currentStep > 1) {
+                    document.getElementById('prevBtn').style.display = 'block';
+                }
+
+                if (currentStep === totalSteps) {
+                    document.getElementById('nextBtn').style.display = 'none';
+                    document.getElementById('submitBtn').style.display = 'block';
+                }
+            }
+        });
+
+        async function loadSlots(startDate, endDate, tenant_uuid) {
+            try {
+                const response = await fetch(`/api/slots?startDate=${startDate}&endDate=${endDate}&tenant_uuid=${tenant_uuid}`);
+                const data = await response.json();
+
+                const dateSelect = document.getElementById('dateSelect');
+                const timeSlotsContainer = document.getElementById('timeSlotsContainer');
+
+                dateSelect.innerHTML = '<option value="">Select a date</option>';
+                timeSlotsContainer.innerHTML = '';
+
+                if (data.Staffs && data.Staffs.length > 0) {
+                    const slotsByDate = {};
+
+                    data.Staffs.forEach(staff => {
+                        staff.days.forEach(day => {
+                            const dateOnly = new Date(day.date).toLocaleDateString();
+                            if (!slotsByDate[dateOnly]) slotsByDate[dateOnly] = [];
+
+                            day.spots.forEach(spot => {
+                                slotsByDate[dateOnly].push(spot);
+                            });
+                        });
+                    });
+
+
+                    Object.keys(slotsByDate).forEach(date => {
+                        const option = document.createElement('option');
+                        option.value = date;
+                        option.textContent = date;
+                        dateSelect.appendChild(option);
+                    });
+
+
+                    dateSelect.onchange = function () {
+                        const selectedDate = this.value;
+                        timeSlotsContainer.innerHTML = '';
+
+                        if (slotsByDate[selectedDate]) {
+                            slotsByDate[selectedDate].forEach(timeStr => {
+                                const rawDate = new Date(timeStr);
+                                const formattedTime = rawDate.toLocaleTimeString([], {
+                                    hour: '2-digit',
+                                    minute: '2-digit',
+                                    timeZone: 'UTC'
+                                });
+                                // Example: 10:00 AM
+
+                                const timeBtn = document.createElement('div');
+                                timeBtn.className = 'time-slot';
+                                timeBtn.textContent = formattedTime;
+                                timeBtn.dataset.value = timeStr;
+
+                                timeBtn.onclick = function () {
+                                    document.querySelectorAll('.time-slot').forEach(el => el.classList.remove('selected'));
+                                    this.classList.add('selected');
+                                    console.log("Selected slot:", this.dataset.value);
+                                };
+
+                                timeSlotsContainer.appendChild(timeBtn);
+                            });
+                        } else {
+                            timeSlotsContainer.innerHTML = '<p style="color:red">No time slots available</p>';
+                        }
+                    };
+
+                } else {
+                    $('.date-error-message').text('No available slots for selected dates').css('color', 'red');
+                }
+
+            } catch (error) {
+                console.error('Error fetching slots:', error);
+                $('.date-error-message').text('Error loading available slots');
+            }
+        }
+
+        // Handle Previous button
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentStep > 1) {
+                document.getElementById(`step${currentStep}`).style.display = 'none';
+                currentStep--;
+                document.getElementById(`step${currentStep}`).style.display = 'block';
+                updateStepper(currentStep); // Add this line
+
+                if (currentStep === 1) {
+                    document.getElementById('prevBtn').style.display = 'none';
+                }
+
+                document.getElementById('nextBtn').style.display = 'block';
+                document.getElementById('submitBtn').style.display = 'none';
+            }
+        });
+
+        // Handle form submission
+        document.getElementById('tourBookingForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+             const phoneInput = document.getElementById('tourPhone');
+            const phone = document.getElementById('tourPhone').value.trim();
+            const selectedSlot = document.querySelector('.time-slot.selected');
+
+                const phoneRegex = /^\d{10}$/;
+if (!phoneRegex.test(phone)) {
+        const errorMsg = document.createElement('div');
+        errorMsg.className = 'phone-error text-danger mt-1';
+        errorMsg.innerText = "Please enter a valid 10-digit phone number.";
+        phoneInput.insertAdjacentElement('afterend', errorMsg);
+        return;
+    }
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                email: document.getElementById('tourEmail').value,
+                phone: document.getElementById('tourPhone').value,
+                state: document.getElementById('state').value,
+                city: document.getElementById('city').value,
+                country: document.getElementById('country').value,
+                notes: document.getElementById('tourNotes').value,
+                tenant_uuid: "405ac829-d6f3-407c-8eae-38ac74667594",
+                timeSlot: selectedSlot.dataset.value
+            };
+
+            try {
+                const response = await fetch('/api/book-tour', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+                // Parse the JSON response
+                const data = await response.json();
+
+                if (response.ok) {
+                    $('#tourBookingModal').modal('hide');
+                    $('#successModal').modal('show');
+                    // Reset form
+                    document.getElementById('tourBookingForm').reset();
+                    currentStep = 1;
+                    document.querySelectorAll('.step').forEach(step => step.style.display = 'none');
+                    document.getElementById('step1').style.display = 'block';
+                    document.getElementById('nextBtn').style.display = 'block';
+                    document.getElementById('prevBtn').style.display = 'none';
+                    document.getElementById('submitBtn').style.display = 'none';
+                } else {
+                    alert('Error booking tour. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error booking tour. Please try again.');
+            }
+        });
+    
   </script>
   </body>
 

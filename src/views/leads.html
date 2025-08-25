@@ -248,28 +248,40 @@
                     <div class="modal-body">
                         <div class="stepper-wrapper mb-4">
                             <div class="stepper-item active" id="stepper1">
-                                <div class="step-counter"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-  <path d="M7 11h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zM7 15h2v2H7v-2zm4 
+                                <div class="step-counter"><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="22" height="22"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M7 11h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zM7 15h2v2H7v-2zm4 
   0h2v2h-2v-2zm4 0h2v2h-2v-2zM6 3h1V1h2v2h6V1h2v2h1a2 2 0 0 1 2 
   2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm0 
-  4v12h12V7H6z"/>
-</svg></div>
+  4v12h12V7H6z" />
+                                    </svg></div>
                                 <div class="step-name">Select Dates</div>
                             </div>
                             <div class="stepper-item" id="stepper2">
-                                <div class="step-counter"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-  <path d="M12 1a11 11 0 1 0 11 11A11.013 11.013 0 0 0 12 
+                                <div class="step-counter"><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="22" height="22"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 1a11 11 0 1 0 11 11A11.013 11.013 0 0 0 12 
   1zm0 20a9 9 0 1 1 9-9a9.01 9.01 0 0 1-9 9zm.5-13H11v6l5.25 
-  3.15l.75-1.23l-4.5-2.67z"/>
-</svg></div>
+  3.15l.75-1.23l-4.5-2.67z" />
+                                    </svg></div>
                                 <div class="step-name">Choose Slot</div>
                             </div>
                             <div class="stepper-item" id="stepper3">
-                                <div class="step-counter"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-  <path d="M12 12a5 5 0 1 0-5-5a5 5 0 0 0 5 
+                                <div class="step-counter"><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="22" height="22"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 12a5 5 0 1 0-5-5a5 5 0 0 0 5 
   5zm0 2c-3.33 0-10 1.67-10 
-  5v3h20v-3c0-3.33-6.67-5-10-5z"/>
-</svg></div>
+  5v3h20v-3c0-3.33-6.67-5-10-5z" />
+                                    </svg></div>
                                 <div class="step-name">Your Details</div>
                             </div>
                         </div>
@@ -480,8 +492,8 @@
                 dropdown.innerHTML = '';
 
                 // Filter tenants by PreSales status FIRST
-                // const preSalesTenants = tenants.filter(tenant => tenant.status === 'PreSales');
-                const preSalesTenants = tenants;
+                const preSalesTenants = tenants.filter(tenant => tenant.id === 120);
+                // const preSalesTenants = tenants;
 
                 // Add placeholder only if there are multiple PreSales locations and no preselected location
                 if (preSalesTenants.length > 1 && !locationParam) {
@@ -820,6 +832,7 @@ if (!phoneRegex.test(phone)) {
                 alert('Error booking tour. Please try again.');
             }
         });
+    
     </script>
 
     </body>
