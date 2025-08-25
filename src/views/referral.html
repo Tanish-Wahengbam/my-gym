@@ -1,112 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Refer a Friend | MyGem</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refer a Friend | MyGem</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
-  <!-- Hero Section (Header) -->
-  <section class="hero">
-    <!-- Centered Logo -->
-    <a href="/"><img src="images/logo.png" alt="MyGem Logo"></a>
-    <h1>Refer Your Friends
-    </h1>
-  </section>
+  <body>
+    <!-- Hero Section (Header) -->
+    <section class="hero hero-refer ">
+      <!-- Centered Logo -->
+      <a href="/"><img src="images/logo.png" alt="MyGem Logo"></a>
+      <h1>Refer Your Friends
+      </h1>
+    </section>
 
+    <!-- Content + Form Section -->
+    <section class="content-section">
+      <div class="container">
+        <div class="row g-5">
+          <!-- Explanation -->
 
+          <!-- Referral Form -->
+          <div class="col-md-8 mx-auto">
+            <h5 class="rfer-text1">REFER A FRIEND</h5>
+            <h2 class="rfer-text2">Simply enter your friend's details below, and
+              when they get started, you'll get
+              rewarded.
+            </h2> 
+            <div class="referral-form">
+              <form id="referralForm">
+                <!-- Select Location -->
+                <div class="mb-4">
+                  <label for="selectLocation" class="form-label-custom">SELECT
+                    LOCATION</label>
+                  <select class="form-select-custom w-full" id="selectLocation"
+                    name="location" required></select>
+                </div>
+                <!-- Your Name -->
+                <div class="mb-4">
+                  <label for="yourName" class="form-label-custom">YOUR NAME
+                    *</label>
+                  <input type="text" class="form-control-custom w-full"
+                    id="yourName" name="referrer_name"
+                    placeholder="YOUR NAME" required>
+                </div>
+                <!-- Your Phone Number -->
+                <div class="mb-4">
+                  <label for="yourPhoneNumber" class="form-label-custom">YOUR
+                    PHONE NUMBER *</label>
+                  <input type="tel" class="form-control-custom w-full"
+                    id="yourPhoneNumber" name="referralmobile"
+                    placeholder="YOUR PHONE NUMBER" required>
+                </div>
+                <!-- Friends' Information (dynamic) -->
+                <div id="friendsContainer"></div>
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-dark small">(You can add up to 5
+                    friends)</p>
+                  <button type="button" id="addFriendBtn"
+                    class="btn btn-dark bg-black btn-sm">+ Add Friend</button>
+                </div>
+                <div class="d-grid gap-2">
+                  <button type="submit"
+                    class="btn btn-lg btn-submit-custom shadow-md hover:shadow-lg">REFER
+                    YOUR FRIENDS</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Content + Form Section -->
-  <section class="content-section">
-    <div class="container">
-      <div class="row g-5">
-        <!-- Explanation -->
-
-        <!-- Referral Form -->
-        <div class="col-md-12">
-          <h5 class="rfer-text1">REFER A FRIEND</h5>
-          <h2 class="rfer-text2">Simply enter your friend's details below, and when they get started, you'll get
-            rewarded.
-          </h2>
-          <div class="referral-form">
-          <form id="referralForm">
-            <!-- Select Location -->
-            <div class="mb-4">
-              <label for="selectLocation" class="form-label-custom">SELECT
-                LOCATION</label>
-              <select class="form-select-custom w-full" id="selectLocation" name="location" required></select>
-            </div>
-            <!-- Your Name -->
-            <div class="mb-4">
-              <label for="yourName" class="form-label-custom">YOUR NAME
-                *</label>
-              <input type="text" class="form-control-custom w-full" id="yourName" name="referrer_name"
-                placeholder="YOUR NAME" required>
-            </div>
-            <!-- Your Phone Number -->
-            <div class="mb-4">
-              <label for="yourPhoneNumber" class="form-label-custom">YOUR
-                PHONE NUMBER *</label>
-              <input type="tel" class="form-control-custom w-full" id="yourPhoneNumber" name="referralmobile"
-                placeholder="YOUR PHONE NUMBER" required>
-            </div>
-            <!-- Friends' Information (dynamic) -->
-            <div id="friendsContainer"></div>
-            <div class="d-flex justify-content-between">
-              <p class="text-dark small">(You can add up to 5
-                friends)</p>
-              <button type="button" id="addFriendBtn" class="btn btn-dark bg-black btn-sm">+ Add Friend</button>
-            </div>
-            <div class="d-grid gap-2">
-              <button type="submit" class="btn btn-lg btn-submit-custom shadow-md hover:shadow-lg">REFER
-                YOUR FRIENDS</button>
-            </div>
-          </form>
+    <!-- Success Message Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1"
+      aria-labelledby="successModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-3 shadow-lg p-4 text-center">
+          <div class="modal-body">
+            <svg class="mx-auto mb-4"
+              style="height: 5rem; width: 5rem; color: #28a745;" fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <h3 class="h3 fw-bold text-dark mb-3">Reservation
+              Confirmed!</h3>
+            <p class="text-secondary fs-5">Thank you for
+              your reservation. We look forward to seeing
+              you!</p>
+            <button type="button"
+              class="btn btn-primary rounded-3 shadow-sm mt-4"
+              data-bs-dismiss="modal">
+              Close
+            </button>
           </div>
         </div>
       </div>
     </div>
-  </section>
 
-    <!-- Success Message Modal -->
-  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content rounded-3 shadow-lg p-4 text-center">
-        <div class="modal-body">
-          <svg class="mx-auto mb-4" style="height: 5rem; width: 5rem; color: #28a745;" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <h3 class="h3 fw-bold text-dark mb-3">Reservation
-            Confirmed!</h3>
-          <p class="text-secondary fs-5">Thank you for
-            your reservation. We look forward to seeing
-            you!</p>
-          <button type="button" class="btn btn-primary rounded-3 shadow-sm mt-4" data-bs-dismiss="modal">
-            Close
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="images/logo.svg" alt="FitnessForce Logo">
+      <p>&copy; 2025 FitnessForce.com. All Rights Reserved.</p>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <img src="images/logo.svg" alt="FitnessForce Logo">
-    <p>&copy; 2025 FitnessForce.com. All Rights Reserved.</p>
-    <a class="btn-footer">Book a Tour</a>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
-  <script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
     // Populate location dropdown from /api/tenants
     fetch('/api/tenants')
       .then(res => res.json())
@@ -253,6 +271,6 @@
       });
     });
   </script>
-</body>
+  </body>
 
 </html>

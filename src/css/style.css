@@ -1,403 +1,605 @@
     body {
-      font-family: 'Nunito', sans-serif;
-      background-color: #f8f9fa;
-	  margin:0;
-	  padding:0;
+        font-family: 'Nunito', sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
     }
+
+    .form-check label span {
+        font-family: 'Nunito';
+    }
+
+    section.form-section.container label {
+        font-family: "Oswald", sans-serif;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    section.form-section.container input, section.form-section.container select {
+        height: 40px;
+        padding: 0 15px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+
+    section.form-section.container form {
+        padding: 30px;
+        background: #fff;
+    }
+
+    section.form-section.container .col-md-6:last-child {
+        padding: 0 60px;
+        padding-top: 30px;
+    }
+
     .hero {
-      background-color: #1c1c1c;
-      padding: 20px 15px;
-      text-align: center;
-      color: white;
+        background-color: #1c1c1c;
+        padding: 20px 15px;
+        text-align: center;
+        color: white;
+        background-image: url(../images/bg-fit.jpg);
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 0;
+        background-position: center;
+        min-height: 400px;
     }
+
+    .hero-refer {
+        background-image: url(../images/refer-bg.png);
+    }
+
+
+    .mb-3.form-check label {
+        font-family: 'Nunito', sans-serif !important;
+        font-size: 12px !important;
+    }
+
+    section.form-section.container h4 {
+        font-family: "Oswald", sans-serif;
+    }
+
     .hero h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin-bottom: 20px;
+        margin-bottom: 20px;
+        font-family: "Oswald", sans-serif;
+        text-transform: uppercase;
+        font-size: 102px;
+        line-height: 80px;
+        text-transform: uppercase;
+        font-style: normal;
+        color: rgb(244, 244, 244);
+        text-align: start;
+        letter-spacing: 0.08em;
+        font-weight: 700 !important;
+        padding: 0px 163px;
+        max-width: 1290px;
+        line-height: 110px;
+        margin-bottom: 0;
     }
+
     .hero p {
-      font-size: 1.1rem;
-      color: #f8f9fa;
+        font-size: 1.1rem;
+        color: #f8f9fa;
     }
+
     .form-section {
-      padding: 50px 15px;
+        padding: 50px 15px;
+        max-width: 1140px;
     }
+
     .footer {
-      background-color: #343a40;
-      text-align: center;
-      padding: 30px 0;
-      color: white;
-	  position:relative;
+        background-color: #343a40;
+        text-align: center;
+        padding: 30px 0;
+        color: white;
+        position: relative;
     }
-    a.btn-footer:hover{
+
+    a.btn-footer:hover {
         background: #f6f6f6;
         color: #000;
     }
-	a.btn-footer {
-    position: absolute;
-    right: 30px;
-    top: 0;
-    font-size: 16px;
-    background: #d0222d;
-    bottom: 0;
-    margin: auto auto;
-    text-decoration: none;
-    /* background: #fff; */
-    height: 36px;
-    line-height: 36px;
-    font-weight: bold;
-    padding: 0px 12px;
-    color: #ffffff;
-}
+
+    a.btn-footer {
+        position: absolute;
+        right: 30px;
+        top: 0;
+        font-size: 16px;
+        background: #d0222d;
+        bottom: 0;
+        margin: auto auto;
+        text-decoration: none;
+        /* background: #fff; */
+        height: 36px;
+        line-height: 36px;
+        font-weight: bold;
+        padding: 0px 12px;
+        color: #ffffff;
+    }
+
     .footer img {
-      height: 35px;
-      margin-bottom: 10px;
+        height: 35px;
+        margin-bottom: 10px;
     }
+
     .footer p {
-      margin-bottom: 0;
+        margin-bottom: 0;
     }
+
     .consent-text {
-      font-size: 0.875rem;
+        font-size: 0.875rem;
     }
+
     /* Center logo in header */
     .hero img {
-      max-height: 80px;
-      margin-bottom: 20px;
-    }
-	button.btn.btn-primary.btn-lg.w-100 {
-    background: #e4000e;
-    border: none;
-}
-    .content-section { background: white; padding: 40px 0; }
-    .referral-form { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    .footer { background: #343a40; color: white; text-align: center; padding: 20px 0; }
-	h5.rfer-text1 {
-    text-align: center;
-    font-size: 16px;
-    font-weight: 700;
-}
-h2.rfer-text2 {
-    text-align: center;
-    font-weight: 900;
-}
-.referral-form button.btn.btn-primary.w-100 {
-    background: #e4000e;
-    border: none;
-    max-width: 200px;
-    font-weight: bold;
-    margin: 0 auto;
-    padding: 10px 0;
-}
-
-@media screen and (max-width: 767px) {
-a.btn-footer {
-    position: relative;
-    right: 0;
-    padding: 8px 10px;
-    margin: 20px 0 0 0;
-}
-footer.footer p {
-    padding-bottom: 20px;
-}
-
-}
-
-
-/* css */
-
-
-
-.remove-friend-btn {
-    position: absolute;
-    top: 1.5rem;
-    right: 0;
-    background: #ff4d4d;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 28px;
-    height: 28px;
-    font-size: 18px;
-    line-height: 1;
-    cursor: pointer;
-}
-
-form#reservationForm {
-    padding: 20px 0 0 0;
-}
-form#reservationForm .form-check input {
-    width: 17px !important;
-    height: 17px;
-    border-radius: 5px !important;
-    padding: 0;
-}
-
-
-
-/* Custom animations (Bootstrap doesn't have these built-in, so re-adding with custom CSS) */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+        max-height: 100px;
+        margin-bottom: 20px;
     }
 
-    to {
+    .hero:before {
+        background: #000;
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 0;
+        opacity: 0.4;
+        background-image: linear-gradient(#000000, #ffff0000);
+    }
+
+    section.hero * {
+        z-index: 5;
+        position: relative;
+    }
+
+    button.btn.btn-primary.btn-lg.w-100 {
+        background: #e4000e;
+        border: none;
+        color: rgb(255, 255, 255);
+        height: 54px;
+        max-width: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        border-radius: 0px !important;
+        margin: 0px auto !important;
+        text-transform: uppercase;
+    }
+
+
+    .content-section {
+        background: white;
+        padding: 40px 0;
+    }
+
+    .referral-form {
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer {
+        background: #343a40;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    h5.rfer-text1 {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    h2.rfer-text2 {
+        text-align: center;
+        font-weight: 900;
+    }
+
+    .referral-form button.btn.btn-primary.w-100 {
+        background: #e4000e;
+        border: none;
+        max-width: 200px;
+        font-weight: bold;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+
+    @media screen and (max-width: 767px) {
+        .hero h1 {
+            font-size: 52px;
+            line-height: 60px;
+            padding: 0;
+        }
+
+        section.form-section.container form {
+            padding: 30px 0 !important;
+        }
+
+        a.btn-footer {
+            position: relative;
+            right: 0;
+            padding: 8px 10px;
+            margin: 20px 0 0 0;
+        }
+
+        footer.footer p {
+            padding-bottom: 20px;
+        }
+
+    }
+
+
+    /* css */
+
+
+
+    .remove-friend-btn {
+        position: absolute;
+        top: 1.5rem;
+        right: 0;
+        background: #ff4d4d;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+        line-height: 1;
+        cursor: pointer;
+    }
+
+    form#reservationForm .form-check input {
+        width: 17px !important;
+        height: 17px;
+        border-radius: 5px !important;
+        padding: 0;
+    }
+
+
+
+    /* Custom animations (Bootstrap doesn't have these built-in, so re-adding with custom CSS) */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.6s ease-out forwards;
+    }
+
+    .animate-fade-in-up {
+        animation: fadeInUp 0.7s ease-out forwards;
+    }
+
+    .delay-100 {
+        animation-delay: 0.1s;
+    }
+
+    .delay-200 {
+        animation-delay: 0.2s;
+    }
+
+    .delay-300 {
+        animation-delay: 0.3s;
+    }
+
+    .delay-400 {
+        animation-delay: 0.4s;
+    }
+
+    .delay-500 {
+        animation-delay: 0.5s;
+    }
+
+    .delay-600 {
+        animation-delay: 0.6s;
+    }
+
+    .delay-700 {
+        animation-delay: 0.7s;
+    }
+
+    .delay-800 {
+        animation-delay: 0.8s;
+    }
+
+    .hero-section2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("../images/The-Hub_Images_Header.jpg");
+        background-size: cover;
+        background-position: center;
         opacity: 1;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+        z-index: 0;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .hero-section2::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(177.06deg,
+                #401945 27.66%,
+                rgba(217, 217, 217, 0) 136.78%);
+        mix-blend-mode: multiply;
+        content: "";
     }
-}
 
-.animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
-}
+    .form-card input,
+    .form-card select {
+        border-radius: 0 !important;
+        border: none;
+        height: 50px;
+    }
 
-.animate-fade-in-up {
-    animation: fadeInUp 0.7s ease-out forwards;
-}
+    .form-card .btn-submit-custom {
+        background: #000;
+        color: #ffffff;
+        border: none;
+        border-radius: 0 !important;
+        height: 54px;
+        max-width: 280px;
+        margin: 0 auto !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        margin-top: 40px !important;
+    }
 
-.delay-100 {
-    animation-delay: 0.1s;
-}
-
-.delay-200 {
-    animation-delay: 0.2s;
-}
-
-.delay-300 {
-    animation-delay: 0.3s;
-}
-
-.delay-400 {
-    animation-delay: 0.4s;
-}
-
-.delay-500 {
-    animation-delay: 0.5s;
-}
-
-.delay-600 {
-    animation-delay: 0.6s;
-}
-
-.delay-700 {
-    animation-delay: 0.7s;
-}
-
-.delay-800 {
-    animation-delay: 0.8s;
-}
-
-.hero-section2::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("../images/The-Hub_Images_Header.jpg");
-    background-size: cover;
-    background-position: center;
-    opacity: 1;
-    z-index: 0;
-}
-
-.hero-section2::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(177.06deg,
-            #401945 27.66%,
-            rgba(217, 217, 217, 0) 136.78%);
-    mix-blend-mode: multiply;
-    content: "";
-}
-
-.form-card input,
-.form-card select {
-    border-radius: 0 !important;
-    border: none;
-    height: 50px;
-}
-
-.form-card .btn-submit-custom {
-    background: #000;
-    color: #ffffff;
-    border: none;
-    border-radius: 0 !important;
-    height: 54px;
-    max-width: 280px;
-    margin: 0 auto !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    margin-top: 40px !important;
-}
-
-.refer-text {
-    font-size: 44px;
-    margin: 10px 0 50px 0;
-    float: left;
-    width: 100%;
-}
+    .refer-text {
+        font-size: 44px;
+        margin: 10px 0 50px 0;
+        float: left;
+        width: 100%;
+    }
 
 
 
-/* Custom styling for form inputs to match the image */
-.form-control-custom {
-    background-color: #fff;
-    /* Black background for inputs */
-    border: 1px solid #ff0000;
-    /* Red border */
-    color: #000;
-    /* White text */
-    padding: 1rem 1.25rem;
-    /* Increased padding */
-    border-radius: 0.5rem;
-    /* Slightly rounded corners */
-    font-size: 1rem;
-    line-height: 1.5;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    width: 100%;
-}
+    /* Custom styling for form inputs to match the image */
+    .form-control-custom {
+        background-color: #fff;
+        /* Black background for inputs */
+        /* Red border */
+        color: #000;
+        /* White text */
+        padding: 10px;
+        /* Increased padding */
+        border-radius: 0.5rem;
+        /* Slightly rounded corners */
+        font-size: 1rem;
+        line-height: 1.5;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        width: 100%;
+    }
 
-.form-control-custom::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-    /* Lighter placeholder text */
-}
+    form#referralForm select, form#referralForm input {
+        height: 50px;
+        padding: 0px 15px;
+        border-radius: 0px !important;
+        border-width: 1px !important;
+        border-style: solid !important;
+        border-color: rgb(204, 204, 204) !important;
+        border-image: initial !important;
+    }
+
+    .form-control-custom::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+        /* Lighter placeholder text */
+    }
 
 
-.btn-submit-custom {
-    background-color: #ff0000;
-    /* Red button */
-    border-color: #ff0000;
-    color: white;
-    transition: background-color 0.3s ease;
-    padding: 1rem 2rem;
-    /* Larger padding for the button */
-    font-size: 1.25rem;
-    /* Larger font size */
-    font-weight: 600;
-    border-radius: 0.5rem;
-    /* Rounded corners for the button */
-}
+    .btn-submit-custom {
+        background-color: #ff0000;
+        /* color: white; */
+        transition: background-color 0.3s ease;
+        padding: 1rem 2rem;
+        /* font-size: 1.25rem; */
+        font-weight: 600;
+        /* border-radius: 0.5rem; */
+        color: rgb(255, 255, 255);
+        height: 54px;
+        max-width: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        border-radius: 0px !important;
+        margin: 40px auto 0px !important;
+    }
 
-.btn-submit-custom:hover {
-    background-color: #cc0000;
-    /* Darker red on hover */
-    border-color: #cc0000;
-    color: #fff;
-}
+    .btn-submit-custom:hover {
+        background-color: #cc0000;
+        /* Darker red on hover */
+        border-color: #cc0000;
+        color: #fff;
+    }
 
-.form-select-custom {
-    background-color: #fff;
-    /* Black background for select */
-    border: 1px solid #ff0000;
-    /* Red border */
-    color: #000;
-    /* White text */
-    padding: 1rem 1.25rem;
-    /* Increased padding */
-    border-radius: 0.5rem;
-    /* Slightly rounded corners */
-    font-size: 1rem;
-    line-height: 1.5;
-    -webkit-appearance: none;
-    /* Remove default arrow */
-    -moz-appearance: none;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
-    /* Custom white arrow */
-    background-repeat: no-repeat;
-    background-position: right 1.25rem center;
-    background-size: 1rem 0.75rem;
-    width: 100%;
-}
+    .form-select-custom {
+        background-color: #fff;
+        /* Black background for select */
+        /* Red border */
+        color: #000;
+        /* White text */
+        padding: 10px 10px;
+        /* Increased padding */
+        border-radius: 0.5rem;
+        /* Slightly rounded corners */
+        font-size: 1rem;
+        line-height: 1.5;
+        -webkit-appearance: none;
+        /* Remove default arrow */
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+        /* Custom white arrow */
+        background-repeat: no-repeat;
+        background-position: right 1.25rem center;
+        background-size: 1rem 0.75rem;
+        width: 100%;
+    }
 
 
 
 
 
-/* Add to your existing CSS file */
-.stepper-wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
+    /* Add to your existing CSS file */
+    .stepper-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
 
-.stepper-item {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-}
+    .stepper-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+    }
 
-.stepper-item::before {
-    position: absolute;
-    content: "";
-    border-bottom: 2px solid #ccc;
-    width: 100%;
-    top: 20px;
-    left: -50%;
-    z-index: 2;
-}
+    .stepper-item::before {
+        position: absolute;
+        content: "";
+        border-bottom: 2px solid #ccc;
+        width: 100%;
+        top: 20px;
+        left: -50%;
+        z-index: 2;
+    }
 
-.stepper-item::after {
-    position: absolute;
-    content: "";
-    border-bottom: 2px solid #ccc;
-    width: 100%;
-    top: 20px;
-    left: 50%;
-    z-index: 2;
-}
+    .stepper-item::after {
+        position: absolute;
+        content: "";
+        border-bottom: 2px solid #ccc;
+        width: 100%;
+        top: 20px;
+        left: 50%;
+        z-index: 2;
+    }
 
-.stepper-item:first-child::before {
-    content: none;
-}
+    .stepper-item:first-child::before {
+        content: none;
+    }
 
-.stepper-item:last-child::after {
-    content: none;
-}
+    .stepper-item:last-child::after {
+        content: none;
+    }
 
-.stepper-item .step-counter {
-    position: relative;
-    z-index: 5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #ccc;
-    margin-bottom: 6px;
-    color: #fff;
-}
+    .stepper-item .step-counter {
+        position: relative;
+        z-index: 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #ccc;
+        margin-bottom: 6px;
+        color: #fff;
+    }
 
-.stepper-item.active .step-counter {
-    background-color: #007bff;
-}
+    .stepper-item.active .step-counter {
+        background-color: #007bff;
+    }
 
-.stepper-item .step-name {
-    font-size: 14px;
-    color: #555;
-}
+    .stepper-item .step-name {
+        font-size: 14px;
+        color: #555;
+    }
 
-.stepper-item.active .step-name {
-    color: #007bff;
-    font-weight: bold;
-}
+    .stepper-item.active .step-name {
+        color: #007bff;
+        font-weight: bold;
+    }
+
+    .services {
+        padding: 60px 15px;
+        max-width: 1140px;
+    }
+
+    .services h2 {
+        font-weight: 700;
+        margin-bottom: 40px;
+        text-align: center;
+        font-family: "Oswald", sans-serif;
+    }
+
+    section.content-section.refer-container {
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    .service-card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .service-card img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    section.form-section.container form {
+        padding: 30px;
+        background: #fff;
+    }
+
+    section.services.container h5 {
+        font-family: "Oswald", sans-serif;
+    }
