@@ -228,4 +228,38 @@ router.post('/referral', async (req, res) => {
     }
 });
 
+
+// GET /slots - fetch available slots
+router.get('/slots', async (req, res) => {
+    try {
+        const { startDate, endDate, tenant_uuid } = req.query;
+
+        if (!startDate || !endDate || !tenant_uuid) {
+            return res.status(400).json({ error: 'startDate, endDate and tenant_uuid are required' });
+        }
+
+        const finalCompanyUuid = "908b3875-a74c-4113-95eb-909bd27d90ea";
+
+        const apiUrl = `https://api.staging.ufp.ai/open/companies/${finalCompanyUuid}/tenants/${tenant_uuid}/tour_availablity?start_date=${startDate}&end_date=${endDate}`;
+
+        const response = await fetch(apiUrl, {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' },
+        });
+
+        const contentType = response.headers.get('content-type');
+        if (contentType && contentType.includes('application/json')) {
+            const data = await response.json();
+            return res.json(data);
+        } else {
+            const errorText = await response.text();
+            return res.status(502).json({ error: 'API did not return JSON', details: errorText });
+        }
+    } catch (error) {
+        console.error('Slots fetch error:', error);
+        return res.status(500).json({ error: 'Something went wrong', details: error.message });
+    }
+});
+
+
 export default router;

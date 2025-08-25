@@ -1,350 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Lock In the Best Rate | FitnessForce</title>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lock In the Best Rate | FitnessForce</title>
 
-        <!-- Google Fonts for Nunito -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
-            rel="stylesheet">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
-            rel="stylesheet">
+    <!-- Google Fonts for Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-            rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css" />
-    </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
 
-    <body>
+<body>
 
-        <!-- Hero Section (Header) -->
-        <section class="hero">
-            <!-- Centered Logo -->
-            <img src="images/logo.png" alt="MyGem Logo">
-            <h1>Lock In the Best Rate</h1>
-            <!-- <p>Get early access and exclusive offers—be the first to know when
+    <!-- Hero Section (Header) -->
+    <section class="hero">
+        <!-- Centered Logo -->
+        <img src="images/logo.png" alt="MyGem Logo">
+        <h1>Lock In the Best Rate</h1>
+        <!-- <p>Get early access and exclusive offers—be the first to know when
             memberships go live as a Founding Member.</p> -->
-        </section>
+    </section>
 
-        <!-- Inquiry Form -->
-        <section class="form-section container">
-            <div class="row justify-content-center">
-                <div class="col-md-6 shadow-lg">
-                    <form id="reservationForm" class="row">
-                        <!-- Name -->
-                        <div class="col-12 mb-3">
-                            <label for="name"
-                                class="form-label ">First
-                                Name*</label>
-                            <input type="text" id="name" name="fname"
-                                placeholder="first name" required
-                                class="form-control form-control-lg rounded-3 shadow-sm">
-                        </div>
+    <!-- Inquiry Form -->
+    <section class="form-section container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 shadow-lg">
+                <form id="reservationForm" class="row">
+                    <!-- Name -->
+                    <div class="col-12 mb-3">
+                        <label for="name" class="form-label ">First
+                            Name*</label>
+                        <input type="text" id="name" name="fname" placeholder="first name" required
+                            class="form-control form-control-lg rounded-3 shadow-sm">
+                    </div>
 
-                        <div class="col-12 mb-3">
-                            <label for="name"
-                                class="form-label ">Last
-                                Name*</label>
-                            <input type="text" id="name" name="lname"
-                                placeholder="last name" required
-                                class="form-control form-control-lg rounded-3 shadow-sm">
-                        </div>
+                    <div class="col-12 mb-3">
+                        <label for="name" class="form-label ">Last
+                            Name*</label>
+                        <input type="text" id="name" name="lname" placeholder="last name" required
+                            class="form-control form-control-lg rounded-3 shadow-sm">
+                    </div>
 
-                        <!-- Email -->
-                        <div class="col-12 mb-3">
-                            <label for="email"
-                                class="form-label ">Email
-                                Address*</label>
-                            <input type="email" id="email" name="email"
-                                placeholder="email" required
-                                class="form-control form-control-lg rounded-3 shadow-sm">
-                        </div>
+                    <!-- Email -->
+                    <div class="col-12 mb-3">
+                        <label for="email" class="form-label ">Email
+                            Address*</label>
+                        <input type="email" id="email" name="email" placeholder="email" required
+                            class="form-control form-control-lg rounded-3 shadow-sm">
+                    </div>
 
-                        <!-- Phone -->
-                        <div class="col-12 mb-3">
-                            <label for="phone"
-                                class="form-label ">Phone
-                                Number*</label>
-                            <input type="tel" id="phone" name="phone"
-                                placeholder="phone number"
-                                class="form-control form-control-lg rounded-3 shadow-sm">
-                        </div>
+                    <!-- Phone -->
+                    <div class="col-12 mb-3">
+                        <label for="phone" class="form-label ">Phone
+                            Number*</label>
+                        <input type="tel" id="phone" name="phone" placeholder="phone number"
+                            class="form-control form-control-lg rounded-3 shadow-sm">
+                    </div>
 
-                        <!-- Number of Guests -->
-                        <div class="col-12 mb-3">
-                            <label for="location"
-                                class="form-label ">
-                                Location of Interest*</label>
-                            <select id="locationDropdown" name="location"
-                                required
-                                class="form-select form-select-lg rounded-3 shadow-sm">
-                                <option value selected disabled>Please
-                                    select</option>
-                            </select>
+                    <!-- Number of Guests -->
+                    <div class="col-12 mb-3">
+                        <label for="location" class="form-label ">
+                            Location of Interest*</label>
+                        <select id="locationDropdown" name="location" required
+                            class="form-select form-select-lg rounded-3 shadow-sm">
+                            <option value selected disabled>Please
+                                select</option>
+                        </select>
+                    </div>
+                    <!-- Checkbox for Terms and Conditions / Newsletter -->
+                    <div class="col-12 mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value id="termsCheckbox">
+                            <label class="form-check-label text-secondary" for="termsCheckbox">
+                                <span>STAY UPDATED ON CLUB NEWS! By checking
+                                    this box, I consent to receive
+                                    promotional
+                                    emails, calls (including prerecorded
+                                    calls),
+                                    and automated SMS texts from Crunch
+                                    and/or
+                                    its affiliates or agents. I confirm that
+                                    I
+                                    am the authorized user of the provided
+                                    email
+                                    and phone number. I understand that my
+                                    consent is voluntary and not a condition
+                                    of
+                                    purchasing any goods or services. I can
+                                    opt
+                                    out anytime by unsubscribing from emails
+                                    or
+                                    texting STOP to any SMS. Standard
+                                    message
+                                    and data rates may apply. Messaging
+                                    frequency varies. I also agree to the <a href="https://www.crunch.com/terms-of-use"
+                                        rel="noopener">Terms
+                                        of Use</a> and
+                                    consent to the <a href="https://www.crunch.com/privacy-policy"
+                                        rel="noopener">Privacy
+                                        Policy</a> ,
+                                    including collecting certain location
+                                    and
+                                    usage information.<span class="hs-form-required">*</span></span>
+                            </label>
                         </div>
-                        <!-- Checkbox for Terms and Conditions / Newsletter -->
-                        <div class="col-12 mb-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox"
-                                    value id="termsCheckbox">
-                                <label class="form-check-label text-secondary"
-                                    for="termsCheckbox">
-                                    <span>STAY UPDATED ON CLUB NEWS! By checking
-                                        this box, I consent to receive
-                                        promotional
-                                        emails, calls (including prerecorded
-                                        calls),
-                                        and automated SMS texts from Crunch
-                                        and/or
-                                        its affiliates or agents. I confirm that
-                                        I
-                                        am the authorized user of the provided
-                                        email
-                                        and phone number. I understand that my
-                                        consent is voluntary and not a condition
-                                        of
-                                        purchasing any goods or services. I can
-                                        opt
-                                        out anytime by unsubscribing from emails
-                                        or
-                                        texting STOP to any SMS. Standard
-                                        message
-                                        and data rates may apply. Messaging
-                                        frequency varies. I also agree to the <a
-                                            href="https://www.crunch.com/terms-of-use"
-                                            rel="noopener">Terms
-                                            of Use</a> and
-                                        consent to the <a
-                                            href="https://www.crunch.com/privacy-policy"
-                                            rel="noopener">Privacy
-                                            Policy</a> ,
-                                        including collecting certain location
-                                        and
-                                        usage information.<span
-                                            class="hs-form-required">*</span></span>
-                                </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="col-12">
+                        <button type="submit" id="reservationForm"
+                            class="btn btn-primary btn-lg w-100 rounded-3 shadow-lg fw-bold btn-custom-hover">
+                            Send Enquiry
+                        </button>
+                        <p id="errorMessage" class="text-danger text-center mt-3"></p>
+                    </div>
+                </form>
+                <!-- Add this spinner just before the closing </form> tag -->
+                <div class="text-center my-3">
+                    <div id="formLoader" class="spinner-border text-primary" style="display:none;" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h4 style="font-weight:bold;">Reserve Your Rate Today
+                </h4>
+                <p>We love opening new clubs and are pumped to be adding a
+                    location near you!
+
+                    Patience may be a virtue, but it's cool with us if it's
+                    not one of yours. Get in early by signing up
+                    now to make sure you're the first to know when
+                    memberships go on sale and have the opportunity to
+                    secure your spot as a Founding Member. All you need to
+                    do is submit your contact information and
+                    you'll receive all the info on the lowest rates, plus
+                    exclusive offers and giveaways.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services container">
+        <h2>Our Services</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="service-card">
+                    <img src="images/f1.jpg" alt="Personal Training">
+                    <h5>Personal Training</h5>
+                    <p>One-on-one training with expert coaches to achieve
+                        your fitness goals.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <img src="images/f2.jpg" alt="Group Classes">
+                    <h5>Group Classes</h5>
+                    <p>Fun, energetic classes including Zumba, Yoga, HIIT &
+                        more.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <img src="images/f3.jpg" alt="Nutrition Plans">
+                    <h5>Nutrition Plans</h5>
+                    <p>Customized diet guidance to keep your body fueled &
+                        healthy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Message Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-3 shadow-lg p-4 text-center">
+                <div class="modal-body">
+                    <svg class="mx-auto mb-4" style="height: 5rem; width: 5rem; color: #28a745;" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h3 class="h3 fw-bold text-dark mb-3">Reservation
+                        Confirmed!</h3>
+                    <p class="text-secondary fs-5">Thank you for
+                        your reservation. We look forward to seeing
+                        you!</p>
+                    <button type="button" class="btn btn-primary rounded-3 shadow-sm mt-4" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <img src="images/logo.svg" alt="FitnessForce Logo">
+        <p>&copy; 2025 FitnessForce.com. All Rights Reserved.</p>
+        <a class="shadow-sm btn-footer px-3" href="#">
+            Book a Tour
+        </a>
+    </footer>
+
+    <!-- Tour Booking Modal -->
+    <div class="modal fade" id="tourBookingModal" tabindex="-1" aria-labelledby="tourBookingModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tourBookingModalLabel">Book
+                        a Tour</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="stepper-wrapper mb-4">
+                        <div class="stepper-item active" id="stepper1">
+                            <div class="step-counter">1</div>
+                            <div class="step-name">Select Dates</div>
+                        </div>
+                        <div class="stepper-item" id="stepper2">
+                            <div class="step-counter">2</div>
+                            <div class="step-name">Choose Slot</div>
+                        </div>
+                        <div class="stepper-item" id="stepper3">
+                            <div class="step-counter">3</div>
+                            <div class="step-name">Your Details</div>
+                        </div>
+                    </div>
+                    <form id="tourBookingForm">
+                        <!-- Step 1: Date Selection -->
+                        <div class="step" id="step1">
+                            <!-- <span>Select Tour Dates</span> -->
+                            <div class="date-error-message text-center"></div>
+                            <div class="mb-3">
+                                <label class="form-label">Start Date</label>
+                                <input type="date" class="form-control" id="startDate" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">End Date</label>
+                                <input type="date" class="form-control" id="endDate" required>
                             </div>
                         </div>
 
-                        <!-- Submit Button -->
-                        <div class="col-12">
-                            <button type="submit" id="reservationForm"
-                                class="btn btn-primary btn-lg w-100 rounded-3 shadow-lg fw-bold btn-custom-hover">
-                                Send Enquiry
-                            </button>
-                            <p id="errorMessage"
-                                class="text-danger text-center mt-3"></p>
+                        <!-- Step 2: Time Slot Selection -->
+                        <div class="step" id="step2" style="display: none;">
+                            <!-- <h6>Select Available Time Slot</h6> -->
+                            <div class="mb-3">
+                                <select class="form-select" id="timeSlot" required>
+                                    <option value>Choose a time
+                                        slot</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Personal Details -->
+                        <div class="step" id="step3" style="display: none;">
+                            <!-- <h6>Your Details</h6> -->
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Full Name" id="fullName" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Email" id="tourEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" placeholder="Phone Number" id="tourPhone"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" id="prevBtn"
+                                style="display: none;">Previous</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+                            <button type="submit" class="btn btn-success" id="submitBtn"
+                                style="display: none;">Submit</button>
                         </div>
                     </form>
-                    <!-- Add this spinner just before the closing </form> tag -->
-                    <div class="text-center my-3">
-                        <div id="formLoader" class="spinner-border text-primary"
-                            style="display:none;" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <h4 style="font-weight:bold;">Reserve Your Rate Today
-                    </h4>
-                    <p>We love opening new clubs and are pumped to be adding a
-                        location near you!
-
-                        Patience may be a virtue, but it's cool with us if it's
-                        not one of yours. Get in early by signing up
-                        now to make sure you're the first to know when
-                        memberships go on sale and have the opportunity to
-                        secure your spot as a Founding Member. All you need to
-                        do is submit your contact information and
-                        you'll receive all the info on the lowest rates, plus
-                        exclusive offers and giveaways.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="services container">
-            <h2>Our Services</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <img src="images/f1.jpg" alt="Personal Training">
-                        <h5>Personal Training</h5>
-                        <p>One-on-one training with expert coaches to achieve
-                            your fitness goals.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <img src="images/f2.jpg" alt="Group Classes">
-                        <h5>Group Classes</h5>
-                        <p>Fun, energetic classes including Zumba, Yoga, HIIT &
-                            more.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <img src="images/f3.jpg" alt="Nutrition Plans">
-                        <h5>Nutrition Plans</h5>
-                        <p>Customized diet guidance to keep your body fueled &
-                            healthy.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Success Message Modal -->
-        <div class="modal fade" id="successModal" tabindex="-1"
-            aria-labelledby="successModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content rounded-3 shadow-lg p-4 text-center">
-                    <div class="modal-body">
-                        <svg class="mx-auto mb-4"
-                            style="height: 5rem; width: 5rem; color: #28a745;"
-                            fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <h3 class="h3 fw-bold text-dark mb-3">Reservation
-                            Confirmed!</h3>
-                        <p class="text-secondary fs-5">Thank you for
-                            your reservation. We look forward to seeing
-                            you!</p>
-                        <button type="button"
-                            class="btn btn-primary rounded-3 shadow-sm mt-4"
-                            data-bs-dismiss="modal">
-                            Close
-                        </button>
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <img src="images/logo.svg" alt="FitnessForce Logo">
-            <p>&copy; 2025 FitnessForce.com. All Rights Reserved.</p>
-            <a class="shadow-sm btn-footer px-3" href="#">
-                Book a Tour
-            </a>
-        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery CDN (add before Bootstrap JS) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Add jQuery Validation plugin CDN after jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
-        <!-- Tour Booking Modal -->
-        <div class="modal fade" id="tourBookingModal" tabindex="-1"
-            aria-labelledby="tourBookingModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="tourBookingModalLabel">Book
-                            a Tour</h5>
-                        <button type="button" class="btn-close"
-                            data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="stepper-wrapper mb-4">
-                            <div class="stepper-item active" id="stepper1">
-                                <div class="step-counter">1</div>
-                                <div class="step-name">Select Dates</div>
-                            </div>
-                            <div class="stepper-item" id="stepper2">
-                                <div class="step-counter">2</div>
-                                <div class="step-name">Choose Slot</div>
-                            </div>
-                            <div class="stepper-item" id="stepper3">
-                                <div class="step-counter">3</div>
-                                <div class="step-name">Your Details</div>
-                            </div>
-                        </div>
-                        <form id="tourBookingForm">
-                            <!-- Step 1: Date Selection -->
-                            <div class="step" id="step1">
-                                <!-- <span>Select Tour Dates</span> -->
-                                <div
-                                    class="date-error-message text-center"></div>
-                                <div class="mb-3">
-                                    <label class="form-label">Start Date</label>
-                                    <input type="date" class="form-control"
-                                        id="startDate" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">End Date</label>
-                                    <input type="date" class="form-control"
-                                        id="endDate" required>
-                                </div>
-                            </div>
-
-                            <!-- Step 2: Time Slot Selection -->
-                            <div class="step" id="step2" style="display: none;">
-                                <!-- <h6>Select Available Time Slot</h6> -->
-                                <div class="mb-3">
-                                    <select class="form-select" id="timeSlot"
-                                        required>
-                                        <option value>Choose a time
-                                            slot</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!-- Step 3: Personal Details -->
-                            <div class="step" id="step3" style="display: none;">
-                                <!-- <h6>Your Details</h6> -->
-                                <div class="mb-3">
-                                    <input type="text" class="form-control"
-                                        placeholder="Full Name" id="fullName"
-                                        required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="email" class="form-control"
-                                        placeholder="Email" id="tourEmail"
-                                        required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="tel" class="form-control"
-                                        placeholder="Phone Number"
-                                        id="tourPhone"
-                                        required>
-                                </div>
-                            </div>
-
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary"
-                                    id="prevBtn"
-                                    style="display: none;">Previous</button>
-                                <button type="button" class="btn btn-primary"
-                                    id="nextBtn">Next</button>
-                                <button type="submit" class="btn btn-success"
-                                    id="submitBtn"
-                                    style="display: none;">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- jQuery CDN (add before Bootstrap JS) -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <!-- Add jQuery Validation plugin CDN after jQuery -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
-        <!-- Bootstrap Bundle with Popper -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
-
-        <script>
+    <script>
 
         $('#startDate, #endDate').on('change', function () {
             $('.date-error-message').text(''); // clear error
@@ -550,47 +503,60 @@
                     return;
                 }
 
-                // try {
-                //     const response = await fetch(`https://api.unifiedfitnessplatform.ai/open/companies/8a25b0b1-e8ac-4d71-b0e2-9476645043e4/tenants/4d2b6de2-5697-4fc0-8bae-31845221b271/tour_availablity?start_date=${startDate}&end_date=${endDate}`);
-                //     const data = await response.json();
+                try {
+                    const response = await fetch(`https://api.staging.ufp.ai/open/companies/908b3875-a74c-4113-95eb-909bd27d90ea/tenants/405ac829-d6f3-407c-8eae-38ac74667594/tour_availablity?start_date=${startDate}&end_date=${endDate}`);
+                    const data = await response.json();
 
-                //     // Populate time slots
-                //     const timeSlotSelect = document.getElementById('timeSlot');
-                //     timeSlotSelect.innerHTML = '<option value="">Choose a time slot</option>';
+                    // Populate time slots
+                    const timeSlotSelect = document.getElementById('timeSlot');
+                    timeSlotSelect.innerHTML = '<option value="">Choose a time slot</option>';
 
-                //     data.slots.forEach(slot => {
-                //         const option = document.createElement('option');
-                //         option.value = slot.id;
-                //         option.textContent = `${slot.date} - ${slot.time}`;
-                //         timeSlotSelect.appendChild(option);
-                //     });
-                // } 
-                // catch (error) {
-                //     console.error('Error fetching slots:', error);
-                //     alert('Error loading available slots');
-                //     return;
-                // }
+                    console.log(data);
+
+                    if (data.Staffs && data.Staffs.length > 0) {
+                        data.Staffs.forEach(staff => {
+                            staff.days.forEach(day => {
+                                day.spots.forEach(spot => {
+                                    const option = document.createElement('option');
+                                    option.value = spot;
+                                    // format to local date/time
+                                    const dateTime = new Date(spot);
+                                    option.textContent = `${dateTime.toLocaleDateString()} ${dateTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
+                                    timeSlotSelect.appendChild(option);
+                                });
+                            });
+                        });
+                    }else{
+                        $('.date-error-message').text('No available slots for selected dates').css('color', 'red');
+                        return;
+                    }
+                }
+                catch (error) {
+                    console.error('Error fetching slots:', error);
+                    $('.date-error-message').text('Error loading available slots');
+                    return;
+                }
 
 
                 // Static data for testing
-                const staticSlots = [
-                    { id: '1', date: '2024-08-24', time: '09:00 AM' },
-                    { id: '2', date: '2024-08-24', time: '11:00 AM' },
-                    { id: '3', date: '2024-08-24', time: '02:00 PM' },
-                    { id: '4', date: '2024-08-25', time: '10:00 AM' },
-                    { id: '5', date: '2024-08-25', time: '03:00 PM' }
-                ];
+                // const staticSlots = [
+                //     { id: '1', date: '2024-08-24', time: '09:00 AM' },
+                //     { id: '2', date: '2024-08-24', time: '11:00 AM' },
+                //     { id: '3', date: '2024-08-24', time: '02:00 PM' },
+                //     { id: '4', date: '2024-08-25', time: '10:00 AM' },
+                //     { id: '5', date: '2024-08-25', time: '03:00 PM' }
+                // ];
 
-                // Populate time slots
-                const timeSlotSelect = document.getElementById('timeSlot');
-                timeSlotSelect.innerHTML = '<option value="">Choose a time slot</option>';
+                // // Populate time slots
+                // const timeSlotSelect = document.getElementById('timeSlot');
+                // timeSlotSelect.innerHTML = '<option value="">Choose a time slot</option>';
 
-                staticSlots.forEach(slot => {
-                    const option = document.createElement('option');
-                    option.value = slot.id;
-                    option.textContent = `${slot.date} - ${slot.time}`;
-                    timeSlotSelect.appendChild(option);
-                });
+                // staticSlots.forEach(slot => {
+                //     const option = document.createElement('option');
+                //     option.value = slot.id;
+                //     option.textContent = `${slot.date} - ${slot.time}`;
+                //     timeSlotSelect.appendChild(option);
+                // });
             }
 
             if (currentStep < totalSteps) {
@@ -670,6 +636,6 @@
         });
     </script>
 
-    </body>
+</body>
 
 </html>
