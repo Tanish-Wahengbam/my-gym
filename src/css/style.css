@@ -77,7 +77,7 @@
         letter-spacing: 0.08em;
         font-weight: 700 !important;
         padding: 0px 163px;
-        max-width: 1290px;
+        /* max-width: 1290px; */
         line-height: 110px;
         margin-bottom: 0;
     }
